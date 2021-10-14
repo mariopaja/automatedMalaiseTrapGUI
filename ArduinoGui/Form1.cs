@@ -14,16 +14,16 @@ using System.Threading;
 
 namespace ArduinoGui
 {
-    
+
     public partial class Form1 : Form
     {
         public Form1()
         {
             InitializeComponent();
-            connectionCheckTimer.Enabled = true;
+            connectionCheckTimer.Enabled = true;    /*  <-  create a timer which allows the gui to check if arduino is connected    */
 
 
-
+            /*  declare the panels for each gui interface   */
             panel.Controls.Add(infoUserControl.Instance);
             infoUserControl.Instance.Dock = DockStyle.Fill;
             panel.Controls.Add(createManualProgramUserControl.Instance);
@@ -35,7 +35,11 @@ namespace ArduinoGui
 
         }
 
-
+        /*
+            DetectArduino() :   checks if an arduino is connected to the device
+                            :   reads teh description of all the connected devices to the PC
+                            :   returns the com port where the arduino is connected
+         */
         public static string DetectArduino()
         {
 
@@ -50,8 +54,6 @@ namespace ArduinoGui
                     string deviceId = item["DeviceID"].ToString();
                     if (desc.Contains("Arduino"))
                     {
-                        //DebugOut("Arduino details: " + desc + " on " + deviceId);
-
                         return deviceId;
                     }
                 }
@@ -63,10 +65,19 @@ namespace ArduinoGui
             }
             return "NOPORT";
         }
+
+        /*
+            DebugOut()  :   debug function for the DetectArduino()
+         */
         public static void DebugOut(string message)
         {
             Console.WriteLine(message);
         }
+
+        /*
+            connectionCheckTimer_Tick() :   software clock that enables gui to check every second for arduino device
+                                        :   1000 interval is in milliseconds
+         */
         public void connectionCheckTimer_Tick(object sender, EventArgs e)
         {
             connectionCheckTimer.Interval = 1000;
@@ -74,48 +85,48 @@ namespace ArduinoGui
 
             if (comPort == "NOPORT")
             {
-                
-                
-                ConnectionIndicator.BackColor = Color.Red;
-                ConnectionStatus.Text = "Disconnected";
-               
-                //infoUserControl.Instance.BringToFront();
-                infoButton.Enabled = true;
-                startProgramButton.Enabled = true;
-                automatedProgramButton.Enabled = true;
-                configDataButton.Enabled = true;
+                ConnectionIndicator.BackColor = Color.Red;              /*  <-  indicator turned red    */
+                ConnectionStatus.Text = "Disconnected";                 /*  <-  panel displays disconnected */
             }
             else
             {
-                //panel.Visible = true;
-                ConnectionIndicator.BackColor = Color.Green;
-                ConnectionStatus.Text = "Connected";
-                infoButton.Enabled = true;
-                startProgramButton.Enabled = true;
-                automatedProgramButton.Enabled = true;
-                configDataButton.Enabled = true;
-                
+                ConnectionIndicator.BackColor = Color.Green;            /*  <-  indicator turned green  */
+                ConnectionStatus.Text = "Connected";                    /*  <-  panel displays connected    */
             }
 
 
         }
+
+        /*
+            infoButton_Click()  :   brings to front info gui interface
+         */
         private void infoButton_Click(object sender, EventArgs e)
         {
-            infoUserControl.Instance.BringToFront();            
+            infoUserControl.Instance.BringToFront();
         }
+
+        /*
+            startProgramButton_Click()  :   brings to front start program gui interface
+         */
         private void startProgramButton_Click(object sender, EventArgs e)
         {
 
-                createManualProgramUserControl.Instance.BringToFront();
-            
-        }
-        private void configDataButton_Click(object sender, EventArgs e)
-        {
-           // if (!panel.Controls.Contains(configUserControl.Instance))
-                configUserControl.Instance.BringToFront();
+            createManualProgramUserControl.Instance.BringToFront();
+
         }
 
-        private void automatedProgramButton_Click(object sender, EventArgs e)
+        /*
+            configDataButton_Click()    :   brings to front config data gui interface
+         */
+        private void configDataButton_Click(object sender, EventArgs e)
+        {
+            configUserControl.Instance.BringToFront();
+        }
+
+        /*
+            selectProgramButton_Click    :   brings to front start program gui interface
+         */
+        private void selectProgramButton_Click(object sender, EventArgs e)
         {
             startProgramUserControl.Instance.BringToFront();
         }

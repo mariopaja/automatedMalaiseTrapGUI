@@ -38,7 +38,7 @@ namespace ArduinoGui
             this.connectionCheckTimer = new System.Windows.Forms.Timer(this.components);
             this.buttonPanel = new System.Windows.Forms.Panel();
             this.configDataButton = new System.Windows.Forms.Button();
-            this.automatedProgramButton = new System.Windows.Forms.Button();
+            this.selectProgramButton = new System.Windows.Forms.Button();
             this.startProgramButton = new System.Windows.Forms.Button();
             this.infoButton = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
@@ -53,30 +53,27 @@ namespace ArduinoGui
             // 
             this.ConnectionPanel.Controls.Add(this.ConnectionStatus);
             this.ConnectionPanel.Controls.Add(this.ConnectionIndicator);
-            this.ConnectionPanel.Location = new System.Drawing.Point(14, 625);
-            this.ConnectionPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ConnectionPanel.Location = new System.Drawing.Point(9, 406);
             this.ConnectionPanel.Name = "ConnectionPanel";
-            this.ConnectionPanel.Size = new System.Drawing.Size(180, 35);
+            this.ConnectionPanel.Size = new System.Drawing.Size(120, 23);
             this.ConnectionPanel.TabIndex = 5;
             // 
             // ConnectionStatus
             // 
             this.ConnectionStatus.AutoSize = true;
             this.ConnectionStatus.Font = new System.Drawing.Font("Arial", 9F);
-            this.ConnectionStatus.Location = new System.Drawing.Point(21, 8);
-            this.ConnectionStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ConnectionStatus.Location = new System.Drawing.Point(14, 5);
             this.ConnectionStatus.Name = "ConnectionStatus";
-            this.ConnectionStatus.Size = new System.Drawing.Size(119, 21);
+            this.ConnectionStatus.Size = new System.Drawing.Size(83, 15);
             this.ConnectionStatus.TabIndex = 1;
             this.ConnectionStatus.Text = "Disconnected";
             // 
             // ConnectionIndicator
             // 
             this.ConnectionIndicator.BackColor = System.Drawing.Color.Red;
-            this.ConnectionIndicator.Location = new System.Drawing.Point(4, 11);
-            this.ConnectionIndicator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ConnectionIndicator.Location = new System.Drawing.Point(3, 7);
             this.ConnectionIndicator.Name = "ConnectionIndicator";
-            this.ConnectionIndicator.Size = new System.Drawing.Size(15, 15);
+            this.ConnectionIndicator.Size = new System.Drawing.Size(10, 10);
             this.ConnectionIndicator.TabIndex = 2;
             this.ConnectionIndicator.TabStop = false;
             // 
@@ -87,51 +84,44 @@ namespace ArduinoGui
             // buttonPanel
             // 
             this.buttonPanel.Controls.Add(this.configDataButton);
-            this.buttonPanel.Controls.Add(this.automatedProgramButton);
+            this.buttonPanel.Controls.Add(this.selectProgramButton);
             this.buttonPanel.Controls.Add(this.ConnectionPanel);
             this.buttonPanel.Controls.Add(this.startProgramButton);
             this.buttonPanel.Controls.Add(this.infoButton);
             this.buttonPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.buttonPanel.Location = new System.Drawing.Point(0, 0);
-            this.buttonPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonPanel.Name = "buttonPanel";
-            this.buttonPanel.Size = new System.Drawing.Size(207, 678);
+            this.buttonPanel.Size = new System.Drawing.Size(138, 441);
             this.buttonPanel.TabIndex = 29;
             // 
             // configDataButton
             // 
-            this.configDataButton.Enabled = false;
             this.configDataButton.Font = new System.Drawing.Font("Arial", 9F);
-            this.configDataButton.Location = new System.Drawing.Point(14, 161);
-            this.configDataButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.configDataButton.Location = new System.Drawing.Point(9, 105);
             this.configDataButton.Name = "configDataButton";
-            this.configDataButton.Size = new System.Drawing.Size(180, 38);
+            this.configDataButton.Size = new System.Drawing.Size(120, 25);
             this.configDataButton.TabIndex = 11;
             this.configDataButton.Text = "Config Data";
             this.configDataButton.UseVisualStyleBackColor = true;
             this.configDataButton.Click += new System.EventHandler(this.configDataButton_Click);
             // 
-            // automatedProgramButton
+            // selectProgramButton
             // 
-            this.automatedProgramButton.Enabled = false;
-            this.automatedProgramButton.Font = new System.Drawing.Font("Arial", 9F);
-            this.automatedProgramButton.Location = new System.Drawing.Point(14, 65);
-            this.automatedProgramButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.automatedProgramButton.Name = "automatedProgramButton";
-            this.automatedProgramButton.Size = new System.Drawing.Size(180, 38);
-            this.automatedProgramButton.TabIndex = 14;
-            this.automatedProgramButton.Text = "Start Program";
-            this.automatedProgramButton.UseVisualStyleBackColor = true;
-            this.automatedProgramButton.Click += new System.EventHandler(this.automatedProgramButton_Click);
+            this.selectProgramButton.Font = new System.Drawing.Font("Arial", 9F);
+            this.selectProgramButton.Location = new System.Drawing.Point(9, 42);
+            this.selectProgramButton.Name = "selectProgramButton";
+            this.selectProgramButton.Size = new System.Drawing.Size(120, 25);
+            this.selectProgramButton.TabIndex = 14;
+            this.selectProgramButton.Text = "Start Program";
+            this.selectProgramButton.UseVisualStyleBackColor = true;
+            this.selectProgramButton.Click += new System.EventHandler(this.selectProgramButton_Click);
             // 
             // startProgramButton
             // 
-            this.startProgramButton.Enabled = false;
             this.startProgramButton.Font = new System.Drawing.Font("Arial", 9F);
-            this.startProgramButton.Location = new System.Drawing.Point(14, 113);
-            this.startProgramButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.startProgramButton.Location = new System.Drawing.Point(9, 73);
             this.startProgramButton.Name = "startProgramButton";
-            this.startProgramButton.Size = new System.Drawing.Size(180, 38);
+            this.startProgramButton.Size = new System.Drawing.Size(120, 25);
             this.startProgramButton.TabIndex = 13;
             this.startProgramButton.Text = "Create Program (M)";
             this.startProgramButton.UseVisualStyleBackColor = true;
@@ -139,12 +129,10 @@ namespace ArduinoGui
             // 
             // infoButton
             // 
-            this.infoButton.Enabled = false;
             this.infoButton.Font = new System.Drawing.Font("Arial", 9F);
-            this.infoButton.Location = new System.Drawing.Point(14, 17);
-            this.infoButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.infoButton.Location = new System.Drawing.Point(9, 11);
             this.infoButton.Name = "infoButton";
-            this.infoButton.Size = new System.Drawing.Size(180, 38);
+            this.infoButton.Size = new System.Drawing.Size(120, 25);
             this.infoButton.TabIndex = 12;
             this.infoButton.Text = "Info";
             this.infoButton.UseVisualStyleBackColor = true;
@@ -153,10 +141,9 @@ namespace ArduinoGui
             // panel
             // 
             this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel.Location = new System.Drawing.Point(207, 0);
-            this.panel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel.Location = new System.Drawing.Point(138, 0);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(828, 678);
+            this.panel.Size = new System.Drawing.Size(552, 441);
             this.panel.TabIndex = 14;
             // 
             // intervalDataBindingSource
@@ -165,15 +152,14 @@ namespace ArduinoGui
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1035, 678);
+            this.ClientSize = new System.Drawing.Size(690, 441);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.buttonPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "AMMOD Malaise Trap";
@@ -199,7 +185,7 @@ namespace ArduinoGui
         private System.Windows.Forms.Button startProgramButton;
         private System.Windows.Forms.Button infoButton;
         private System.Windows.Forms.Panel panel;
-        private System.Windows.Forms.Button automatedProgramButton;
+        private System.Windows.Forms.Button selectProgramButton;
     }
 }
 
