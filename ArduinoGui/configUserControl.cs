@@ -35,7 +35,7 @@ namespace ArduinoGui
             string comPort = DetectArduino();
             serialPort.PortName = comPort;
             timer.Enabled = true;
-            
+
         }
         public static string DetectArduino()
         {
@@ -76,67 +76,28 @@ namespace ArduinoGui
 
         private void saveTimeButton_Click(object sender, EventArgs e)
         {
-            try
+            string comPort = DetectArduino();
+            if (comPort != "NOPORT")
             {
-                serialPort.Open();
-                string sLine = "";
-                sLine = sLine + "R" + DateTime.Now.ToString("HH:mm:ss,dd/MM/yyyy")+";";
-                serialPort.Write(sLine);
-                serialPort.Close();
-                Console.WriteLine(sLine);
-                MessageBox.Show("Time Set", "Program Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (System.Exception err)
-            {
-                MessageBox.Show(err.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-       /* private void button1_Click(object sender, EventArgs e)
-        {
-        
-
-            
-                     /*   try
-                        {
-                            //string filepath = @"C:\Users\mario\Desktop\data\log.txt";
-
-                            Console.WriteLine("Incoming Data:");
-                            // Attach a method to be called when there
-                            // is data waiting in the port's buffer 
-                            serialPort.DataReceived += new SerialDataReceivedEventHandler(port_DataReceived);
-                            // Begin communications 
-                            serialPort.Open();
-                            serialPort.Write("D");
-                   
-                            // Enter an application loop to keep this thread alive 
-                            //Console.ReadLine();
-                            //serialPort.Close();
-
-                             // DialogResult result = MessageBox.Show("Data Transfered", "Program Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                             // if (result == DialogResult.OK)
-                            // {
-                             //     serialPort.Close();
-                              // }
-
-
-                            //MessageBox.Show("Time Set", "Program Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
+                try
+                {
+                    serialPort.Open();
+                    string sLine = "";
+                    sLine = sLine + "R" + DateTime.Now.ToString("HH:mm:ss,dd/MM/yyyy") + ";";
+                    serialPort.Write(sLine);
+                    serialPort.Close();
+                    Console.WriteLine(sLine);
+                    MessageBox.Show("Time Set", "Program Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
                 catch (System.Exception err)
                 {
                     MessageBox.Show(err.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                 }/*
-
+                }
+            }
+            else MessageBox.Show("No Arduino Connected", "Transfer Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
-      /*
-        private void port_DataReceived(object sender, SerialDataReceivedEventArgs e)
-        {
-            SerialPort sp = (SerialPort)sender;
-            string indata = sp.ReadExisting();
-            textBox1.Text+=(indata.ToString());
-           //Console.Write(serialPort.ReadExisting());
-           
-        }*/
+
+
     }
 }
