@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace ArduinoGui
 {
+
+    /*
+        class intervalData  :   creates a local storage which has four variables
+                            :   used to temporary store the interval data & show them in the create program table
+     */
     class intervalData
     {
         public string bottle { get; set; }
