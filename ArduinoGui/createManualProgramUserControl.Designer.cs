@@ -57,12 +57,12 @@ namespace ArduinoGui
             this.transferDataButton = new System.Windows.Forms.Button();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.serialPort = new System.IO.Ports.SerialPort(this.components);
-            this.intervalDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.minsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.bottleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.daysDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hoursDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.minsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.intervalDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.startProgramPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.intervalDataBindingSource)).BeginInit();
@@ -472,9 +472,9 @@ namespace ArduinoGui
             // transferDataButton
             // 
             this.transferDataButton.Font = new System.Drawing.Font("Arial", 9F);
-            this.transferDataButton.Location = new System.Drawing.Point(385, 382);
+            this.transferDataButton.Location = new System.Drawing.Point(380, 383);
             this.transferDataButton.Name = "transferDataButton";
-            this.transferDataButton.Size = new System.Drawing.Size(140, 23);
+            this.transferDataButton.Size = new System.Drawing.Size(140, 25);
             this.transferDataButton.TabIndex = 28;
             this.transferDataButton.Text = "Create Program File";
             this.transferDataButton.UseVisualStyleBackColor = true;
@@ -531,9 +531,29 @@ namespace ArduinoGui
             this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
             this.dataGridView.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView_RowPostPaint);
             // 
-            // intervalDataBindingSource
+            // minsDataGridViewTextBoxColumn
             // 
-            this.intervalDataBindingSource.DataSource = typeof(ArduinoGui.intervalData);
+            this.minsDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.minsDataGridViewTextBoxColumn.DataPropertyName = "mins";
+            this.minsDataGridViewTextBoxColumn.HeaderText = "Minutes";
+            this.minsDataGridViewTextBoxColumn.MinimumWidth = 92;
+            this.minsDataGridViewTextBoxColumn.Name = "minsDataGridViewTextBoxColumn";
+            this.minsDataGridViewTextBoxColumn.ReadOnly = true;
+            this.minsDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.minsDataGridViewTextBoxColumn.Width = 92;
+            // 
+            // Delete
+            // 
+            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Delete.DataPropertyName = "Delete";
+            this.Delete.HeaderText = "Delete";
+            this.Delete.MinimumWidth = 92;
+            this.Delete.Name = "Delete";
+            this.Delete.ReadOnly = true;
+            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Delete.Text = "Delete";
+            this.Delete.UseColumnTextForButtonValue = true;
+            this.Delete.Width = 92;
             // 
             // bottleDataGridViewTextBoxColumn
             // 
@@ -571,29 +591,9 @@ namespace ArduinoGui
             this.hoursDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.hoursDataGridViewTextBoxColumn.Width = 92;
             // 
-            // minsDataGridViewTextBoxColumn
+            // intervalDataBindingSource
             // 
-            this.minsDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.minsDataGridViewTextBoxColumn.DataPropertyName = "mins";
-            this.minsDataGridViewTextBoxColumn.HeaderText = "Minutes";
-            this.minsDataGridViewTextBoxColumn.MinimumWidth = 92;
-            this.minsDataGridViewTextBoxColumn.Name = "minsDataGridViewTextBoxColumn";
-            this.minsDataGridViewTextBoxColumn.ReadOnly = true;
-            this.minsDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.minsDataGridViewTextBoxColumn.Width = 92;
-            // 
-            // Delete
-            // 
-            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Delete.DataPropertyName = "Delete";
-            this.Delete.HeaderText = "Delete";
-            this.Delete.MinimumWidth = 92;
-            this.Delete.Name = "Delete";
-            this.Delete.ReadOnly = true;
-            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Delete.Text = "Delete";
-            this.Delete.UseColumnTextForButtonValue = true;
-            this.Delete.Width = 92;
+            this.intervalDataBindingSource.DataSource = typeof(ArduinoGui.intervalData);
             // 
             // createManualProgramUserControl
             // 
