@@ -101,7 +101,7 @@ namespace ArduinoGui
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 9F);
-            this.label1.Location = new System.Drawing.Point(268, 388);
+            this.label1.Location = new System.Drawing.Point(269, 388);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 15);
             this.label1.TabIndex = 48;
@@ -144,7 +144,7 @@ namespace ArduinoGui
             "28",
             "29",
             "30"});
-            this.repeat.Location = new System.Drawing.Point(324, 384);
+            this.repeat.Location = new System.Drawing.Point(325, 384);
             this.repeat.Name = "repeat";
             this.repeat.Size = new System.Drawing.Size(46, 23);
             this.repeat.TabIndex = 47;
@@ -256,7 +256,7 @@ namespace ArduinoGui
             // 
             this.startTimeLabel.AutoSize = true;
             this.startTimeLabel.Font = new System.Drawing.Font("Arial", 9F);
-            this.startTimeLabel.Location = new System.Drawing.Point(3, 9);
+            this.startTimeLabel.Location = new System.Drawing.Point(3, 11);
             this.startTimeLabel.Name = "startTimeLabel";
             this.startTimeLabel.Size = new System.Drawing.Size(83, 15);
             this.startTimeLabel.TabIndex = 37;
@@ -267,7 +267,7 @@ namespace ArduinoGui
             this.addPauseButton.Font = new System.Drawing.Font("Arial", 9F);
             this.addPauseButton.Location = new System.Drawing.Point(422, 87);
             this.addPauseButton.Name = "addPauseButton";
-            this.addPauseButton.Size = new System.Drawing.Size(106, 24);
+            this.addPauseButton.Size = new System.Drawing.Size(106, 25);
             this.addPauseButton.TabIndex = 36;
             this.addPauseButton.Text = "Add Pause";
             this.addPauseButton.UseVisualStyleBackColor = true;
@@ -432,7 +432,7 @@ namespace ArduinoGui
             this.addInterval.Font = new System.Drawing.Font("Arial", 9F);
             this.addInterval.Location = new System.Drawing.Point(422, 60);
             this.addInterval.Name = "addInterval";
-            this.addInterval.Size = new System.Drawing.Size(106, 24);
+            this.addInterval.Size = new System.Drawing.Size(106, 25);
             this.addInterval.TabIndex = 31;
             this.addInterval.Text = "Add Interval";
             this.addInterval.UseVisualStyleBackColor = true;
@@ -464,7 +464,7 @@ namespace ArduinoGui
             // startTimePicker
             // 
             this.startTimePicker.Font = new System.Drawing.Font("Arial", 9F);
-            this.startTimePicker.Location = new System.Drawing.Point(102, 8);
+            this.startTimePicker.Location = new System.Drawing.Point(90, 8);
             this.startTimePicker.Name = "startTimePicker";
             this.startTimePicker.Size = new System.Drawing.Size(239, 21);
             this.startTimePicker.TabIndex = 29;
@@ -472,7 +472,7 @@ namespace ArduinoGui
             // transferDataButton
             // 
             this.transferDataButton.Font = new System.Drawing.Font("Arial", 9F);
-            this.transferDataButton.Location = new System.Drawing.Point(380, 383);
+            this.transferDataButton.Location = new System.Drawing.Point(386, 383);
             this.transferDataButton.Name = "transferDataButton";
             this.transferDataButton.Size = new System.Drawing.Size(140, 25);
             this.transferDataButton.TabIndex = 28;
