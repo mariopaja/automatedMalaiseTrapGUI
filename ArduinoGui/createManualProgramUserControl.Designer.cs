@@ -56,13 +56,13 @@ namespace ArduinoGui
             this.startTimePicker = new System.Windows.Forms.DateTimePicker();
             this.transferDataButton = new System.Windows.Forms.Button();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.minsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.serialPort = new System.IO.Ports.SerialPort(this.components);
+            this.intervalDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bottleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.daysDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hoursDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.intervalDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.minsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.startProgramPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.intervalDataBindingSource)).BeginInit();
@@ -92,20 +92,18 @@ namespace ArduinoGui
             this.startProgramPanel.Controls.Add(this.startTimePicker);
             this.startProgramPanel.Controls.Add(this.transferDataButton);
             this.startProgramPanel.Controls.Add(this.dataGridView);
-            this.startProgramPanel.Location = new System.Drawing.Point(4, 5);
-            this.startProgramPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.startProgramPanel.Location = new System.Drawing.Point(3, 3);
             this.startProgramPanel.Name = "startProgramPanel";
-            this.startProgramPanel.Size = new System.Drawing.Size(844, 631);
+            this.startProgramPanel.Size = new System.Drawing.Size(563, 410);
             this.startProgramPanel.TabIndex = 30;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 9F);
-            this.label1.Location = new System.Drawing.Point(402, 597);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(268, 388);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 21);
+            this.label1.Size = new System.Drawing.Size(53, 15);
             this.label1.TabIndex = 48;
             this.label1.Text = "Repeat :";
             // 
@@ -146,21 +144,19 @@ namespace ArduinoGui
             "28",
             "29",
             "30"});
-            this.repeat.Location = new System.Drawing.Point(486, 591);
-            this.repeat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.repeat.Location = new System.Drawing.Point(324, 384);
             this.repeat.Name = "repeat";
-            this.repeat.Size = new System.Drawing.Size(67, 29);
+            this.repeat.Size = new System.Drawing.Size(46, 23);
             this.repeat.TabIndex = 47;
             // 
             // pauseBottle
             // 
             this.pauseBottle.Enabled = false;
             this.pauseBottle.Font = new System.Drawing.Font("Arial", 9F);
-            this.pauseBottle.Location = new System.Drawing.Point(120, 136);
-            this.pauseBottle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pauseBottle.Location = new System.Drawing.Point(80, 88);
             this.pauseBottle.Multiline = true;
             this.pauseBottle.Name = "pauseBottle";
-            this.pauseBottle.Size = new System.Drawing.Size(61, 33);
+            this.pauseBottle.Size = new System.Drawing.Size(42, 23);
             this.pauseBottle.TabIndex = 46;
             this.pauseBottle.Text = "13";
             // 
@@ -174,20 +170,18 @@ namespace ArduinoGui
             "15",
             "30",
             "45"});
-            this.pauseMins.Location = new System.Drawing.Point(490, 136);
-            this.pauseMins.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pauseMins.Location = new System.Drawing.Point(327, 88);
             this.pauseMins.Name = "pauseMins";
-            this.pauseMins.Size = new System.Drawing.Size(132, 29);
+            this.pauseMins.Size = new System.Drawing.Size(89, 23);
             this.pauseMins.TabIndex = 45;
             // 
             // labelMins
             // 
             this.labelMins.AutoSize = true;
             this.labelMins.Font = new System.Drawing.Font("Arial", 9F);
-            this.labelMins.Location = new System.Drawing.Point(490, 70);
-            this.labelMins.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelMins.Location = new System.Drawing.Point(327, 45);
             this.labelMins.Name = "labelMins";
-            this.labelMins.Size = new System.Drawing.Size(133, 21);
+            this.labelMins.Size = new System.Drawing.Size(91, 15);
             this.labelMins.TabIndex = 44;
             this.labelMins.Text = "Duration (Mins)";
             // 
@@ -202,10 +196,9 @@ namespace ArduinoGui
             "15",
             "30",
             "45"});
-            this.intervalMins.Location = new System.Drawing.Point(490, 94);
-            this.intervalMins.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.intervalMins.Location = new System.Drawing.Point(327, 61);
             this.intervalMins.Name = "intervalMins";
-            this.intervalMins.Size = new System.Drawing.Size(132, 29);
+            this.intervalMins.Size = new System.Drawing.Size(89, 23);
             this.intervalMins.TabIndex = 43;
             this.intervalMins.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.intervalMins_KeyPress);
             // 
@@ -213,10 +206,9 @@ namespace ArduinoGui
             // 
             this.labelHours.AutoSize = true;
             this.labelHours.Font = new System.Drawing.Font("Arial", 9F);
-            this.labelHours.Location = new System.Drawing.Point(336, 70);
-            this.labelHours.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelHours.Location = new System.Drawing.Point(224, 45);
             this.labelHours.Name = "labelHours";
-            this.labelHours.Size = new System.Drawing.Size(143, 21);
+            this.labelHours.Size = new System.Drawing.Size(99, 15);
             this.labelHours.TabIndex = 42;
             this.labelHours.Text = "Duration (Hours)";
             // 
@@ -224,10 +216,9 @@ namespace ArduinoGui
             // 
             this.labelDays.AutoSize = true;
             this.labelDays.Font = new System.Drawing.Font("Arial", 9F);
-            this.labelDays.Location = new System.Drawing.Point(192, 70);
-            this.labelDays.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelDays.Location = new System.Drawing.Point(128, 45);
             this.labelDays.Name = "labelDays";
-            this.labelDays.Size = new System.Drawing.Size(136, 21);
+            this.labelDays.Size = new System.Drawing.Size(93, 15);
             this.labelDays.TabIndex = 41;
             this.labelDays.Text = "Duration (Days)";
             // 
@@ -235,10 +226,9 @@ namespace ArduinoGui
             // 
             this.labelBottle.AutoSize = true;
             this.labelBottle.Font = new System.Drawing.Font("Arial", 9F);
-            this.labelBottle.Location = new System.Drawing.Point(123, 70);
-            this.labelBottle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelBottle.Location = new System.Drawing.Point(82, 45);
             this.labelBottle.Name = "labelBottle";
-            this.labelBottle.Size = new System.Drawing.Size(56, 21);
+            this.labelBottle.Size = new System.Drawing.Size(38, 15);
             this.labelBottle.TabIndex = 40;
             this.labelBottle.Text = "Bottle";
             // 
@@ -246,10 +236,9 @@ namespace ArduinoGui
             // 
             this.pauseLabel.AutoSize = true;
             this.pauseLabel.Font = new System.Drawing.Font("Arial", 9F);
-            this.pauseLabel.Location = new System.Drawing.Point(2, 140);
-            this.pauseLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.pauseLabel.Location = new System.Drawing.Point(1, 91);
             this.pauseLabel.Name = "pauseLabel";
-            this.pauseLabel.Size = new System.Drawing.Size(109, 21);
+            this.pauseLabel.Size = new System.Drawing.Size(75, 15);
             this.pauseLabel.TabIndex = 39;
             this.pauseLabel.Text = "Pause Data:";
             // 
@@ -257,10 +246,9 @@ namespace ArduinoGui
             // 
             this.intervalDataLabel.AutoSize = true;
             this.intervalDataLabel.Font = new System.Drawing.Font("Arial", 9F);
-            this.intervalDataLabel.Location = new System.Drawing.Point(2, 99);
-            this.intervalDataLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.intervalDataLabel.Location = new System.Drawing.Point(1, 64);
             this.intervalDataLabel.Name = "intervalDataLabel";
-            this.intervalDataLabel.Size = new System.Drawing.Size(116, 21);
+            this.intervalDataLabel.Size = new System.Drawing.Size(78, 15);
             this.intervalDataLabel.TabIndex = 38;
             this.intervalDataLabel.Text = "Interval Data:";
             // 
@@ -268,20 +256,18 @@ namespace ArduinoGui
             // 
             this.startTimeLabel.AutoSize = true;
             this.startTimeLabel.Font = new System.Drawing.Font("Arial", 9F);
-            this.startTimeLabel.Location = new System.Drawing.Point(4, 14);
-            this.startTimeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.startTimeLabel.Location = new System.Drawing.Point(3, 9);
             this.startTimeLabel.Name = "startTimeLabel";
-            this.startTimeLabel.Size = new System.Drawing.Size(121, 21);
+            this.startTimeLabel.Size = new System.Drawing.Size(83, 15);
             this.startTimeLabel.TabIndex = 37;
             this.startTimeLabel.Text = "Starting Time:";
             // 
             // addPauseButton
             // 
             this.addPauseButton.Font = new System.Drawing.Font("Arial", 9F);
-            this.addPauseButton.Location = new System.Drawing.Point(633, 134);
-            this.addPauseButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.addPauseButton.Location = new System.Drawing.Point(422, 87);
             this.addPauseButton.Name = "addPauseButton";
-            this.addPauseButton.Size = new System.Drawing.Size(159, 37);
+            this.addPauseButton.Size = new System.Drawing.Size(106, 24);
             this.addPauseButton.TabIndex = 36;
             this.addPauseButton.Text = "Add Pause";
             this.addPauseButton.UseVisualStyleBackColor = true;
@@ -317,10 +303,9 @@ namespace ArduinoGui
             "21",
             "22",
             "23"});
-            this.pauseHours.Location = new System.Drawing.Point(338, 136);
-            this.pauseHours.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pauseHours.Location = new System.Drawing.Point(225, 88);
             this.pauseHours.Name = "pauseHours";
-            this.pauseHours.Size = new System.Drawing.Size(142, 29);
+            this.pauseHours.Size = new System.Drawing.Size(96, 23);
             this.pauseHours.TabIndex = 35;
             // 
             // pauseDays
@@ -360,10 +345,9 @@ namespace ArduinoGui
             "28",
             "29",
             "30"});
-            this.pauseDays.Location = new System.Drawing.Point(192, 136);
-            this.pauseDays.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pauseDays.Location = new System.Drawing.Point(128, 88);
             this.pauseDays.Name = "pauseDays";
-            this.pauseDays.Size = new System.Drawing.Size(134, 29);
+            this.pauseDays.Size = new System.Drawing.Size(91, 23);
             this.pauseDays.TabIndex = 34;
             // 
             // intervalHours
@@ -396,10 +380,9 @@ namespace ArduinoGui
             "21",
             "22",
             "23"});
-            this.intervalHours.Location = new System.Drawing.Point(338, 94);
-            this.intervalHours.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.intervalHours.Location = new System.Drawing.Point(225, 61);
             this.intervalHours.Name = "intervalHours";
-            this.intervalHours.Size = new System.Drawing.Size(142, 29);
+            this.intervalHours.Size = new System.Drawing.Size(96, 23);
             this.intervalHours.TabIndex = 33;
             // 
             // intervalDays
@@ -439,19 +422,17 @@ namespace ArduinoGui
             "28",
             "29",
             "30"});
-            this.intervalDays.Location = new System.Drawing.Point(192, 94);
-            this.intervalDays.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.intervalDays.Location = new System.Drawing.Point(128, 61);
             this.intervalDays.Name = "intervalDays";
-            this.intervalDays.Size = new System.Drawing.Size(134, 29);
+            this.intervalDays.Size = new System.Drawing.Size(91, 23);
             this.intervalDays.TabIndex = 32;
             // 
             // addInterval
             // 
             this.addInterval.Font = new System.Drawing.Font("Arial", 9F);
-            this.addInterval.Location = new System.Drawing.Point(633, 93);
-            this.addInterval.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.addInterval.Location = new System.Drawing.Point(422, 60);
             this.addInterval.Name = "addInterval";
-            this.addInterval.Size = new System.Drawing.Size(159, 37);
+            this.addInterval.Size = new System.Drawing.Size(106, 24);
             this.addInterval.TabIndex = 31;
             this.addInterval.Text = "Add Interval";
             this.addInterval.UseVisualStyleBackColor = true;
@@ -475,28 +456,25 @@ namespace ArduinoGui
             "10",
             "11",
             "12"});
-            this.intervalBottle.Location = new System.Drawing.Point(120, 94);
-            this.intervalBottle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.intervalBottle.Location = new System.Drawing.Point(80, 61);
             this.intervalBottle.Name = "intervalBottle";
-            this.intervalBottle.Size = new System.Drawing.Size(61, 29);
+            this.intervalBottle.Size = new System.Drawing.Size(42, 23);
             this.intervalBottle.TabIndex = 30;
             // 
             // startTimePicker
             // 
             this.startTimePicker.Font = new System.Drawing.Font("Arial", 9F);
-            this.startTimePicker.Location = new System.Drawing.Point(153, 12);
-            this.startTimePicker.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.startTimePicker.Location = new System.Drawing.Point(102, 8);
             this.startTimePicker.Name = "startTimePicker";
-            this.startTimePicker.Size = new System.Drawing.Size(356, 28);
+            this.startTimePicker.Size = new System.Drawing.Size(239, 21);
             this.startTimePicker.TabIndex = 29;
             // 
             // transferDataButton
             // 
             this.transferDataButton.Font = new System.Drawing.Font("Arial", 9F);
-            this.transferDataButton.Location = new System.Drawing.Point(577, 587);
-            this.transferDataButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.transferDataButton.Location = new System.Drawing.Point(385, 382);
             this.transferDataButton.Name = "transferDataButton";
-            this.transferDataButton.Size = new System.Drawing.Size(210, 35);
+            this.transferDataButton.Size = new System.Drawing.Size(140, 23);
             this.transferDataButton.TabIndex = 28;
             this.transferDataButton.Text = "Create Program File";
             this.transferDataButton.UseVisualStyleBackColor = true;
@@ -517,7 +495,7 @@ namespace ArduinoGui
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.bottleDataGridViewTextBoxColumn,
             this.daysDataGridViewTextBoxColumn,
@@ -534,8 +512,7 @@ namespace ArduinoGui
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView.GridColor = System.Drawing.SystemColors.Control;
-            this.dataGridView.Location = new System.Drawing.Point(6, 189);
-            this.dataGridView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridView.Location = new System.Drawing.Point(4, 123);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
             this.dataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -549,70 +526,82 @@ namespace ArduinoGui
             this.dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView.RowHeadersWidth = 30;
             this.dataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridView.Size = new System.Drawing.Size(782, 388);
+            this.dataGridView.Size = new System.Drawing.Size(521, 252);
             this.dataGridView.TabIndex = 27;
             this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
             this.dataGridView.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView_RowPostPaint);
-            // 
-            // minsDataGridViewTextBoxColumn
-            // 
-            this.minsDataGridViewTextBoxColumn.DataPropertyName = "mins";
-            this.minsDataGridViewTextBoxColumn.HeaderText = "Minutes";
-            this.minsDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.minsDataGridViewTextBoxColumn.Name = "minsDataGridViewTextBoxColumn";
-            this.minsDataGridViewTextBoxColumn.ReadOnly = true;
-            this.minsDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // Delete
-            // 
-            this.Delete.DataPropertyName = "Delete";
-            this.Delete.HeaderText = "Delete";
-            this.Delete.MinimumWidth = 8;
-            this.Delete.Name = "Delete";
-            this.Delete.ReadOnly = true;
-            this.Delete.Text = "Delete";
-            this.Delete.UseColumnTextForButtonValue = true;
-            this.Delete.Width = 70;
-            // 
-            // bottleDataGridViewTextBoxColumn
-            // 
-            this.bottleDataGridViewTextBoxColumn.DataPropertyName = "bottle";
-            this.bottleDataGridViewTextBoxColumn.HeaderText = "Bottle";
-            this.bottleDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.bottleDataGridViewTextBoxColumn.Name = "bottleDataGridViewTextBoxColumn";
-            this.bottleDataGridViewTextBoxColumn.ReadOnly = true;
-            this.bottleDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // daysDataGridViewTextBoxColumn
-            // 
-            this.daysDataGridViewTextBoxColumn.DataPropertyName = "days";
-            this.daysDataGridViewTextBoxColumn.HeaderText = "Days";
-            this.daysDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.daysDataGridViewTextBoxColumn.Name = "daysDataGridViewTextBoxColumn";
-            this.daysDataGridViewTextBoxColumn.ReadOnly = true;
-            this.daysDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // hoursDataGridViewTextBoxColumn
-            // 
-            this.hoursDataGridViewTextBoxColumn.DataPropertyName = "hours";
-            this.hoursDataGridViewTextBoxColumn.HeaderText = "Hours";
-            this.hoursDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.hoursDataGridViewTextBoxColumn.Name = "hoursDataGridViewTextBoxColumn";
-            this.hoursDataGridViewTextBoxColumn.ReadOnly = true;
-            this.hoursDataGridViewTextBoxColumn.Width = 150;
             // 
             // intervalDataBindingSource
             // 
             this.intervalDataBindingSource.DataSource = typeof(ArduinoGui.intervalData);
             // 
-            // startProgramUserControl
+            // bottleDataGridViewTextBoxColumn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.bottleDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.bottleDataGridViewTextBoxColumn.DataPropertyName = "bottle";
+            this.bottleDataGridViewTextBoxColumn.HeaderText = "Bottle";
+            this.bottleDataGridViewTextBoxColumn.MinimumWidth = 92;
+            this.bottleDataGridViewTextBoxColumn.Name = "bottleDataGridViewTextBoxColumn";
+            this.bottleDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bottleDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.bottleDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.bottleDataGridViewTextBoxColumn.Width = 92;
+            // 
+            // daysDataGridViewTextBoxColumn
+            // 
+            this.daysDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.daysDataGridViewTextBoxColumn.DataPropertyName = "days";
+            this.daysDataGridViewTextBoxColumn.HeaderText = "Days";
+            this.daysDataGridViewTextBoxColumn.MinimumWidth = 92;
+            this.daysDataGridViewTextBoxColumn.Name = "daysDataGridViewTextBoxColumn";
+            this.daysDataGridViewTextBoxColumn.ReadOnly = true;
+            this.daysDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.daysDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.daysDataGridViewTextBoxColumn.Width = 92;
+            // 
+            // hoursDataGridViewTextBoxColumn
+            // 
+            this.hoursDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.hoursDataGridViewTextBoxColumn.DataPropertyName = "hours";
+            this.hoursDataGridViewTextBoxColumn.HeaderText = "Hours";
+            this.hoursDataGridViewTextBoxColumn.MinimumWidth = 92;
+            this.hoursDataGridViewTextBoxColumn.Name = "hoursDataGridViewTextBoxColumn";
+            this.hoursDataGridViewTextBoxColumn.ReadOnly = true;
+            this.hoursDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.hoursDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.hoursDataGridViewTextBoxColumn.Width = 92;
+            // 
+            // minsDataGridViewTextBoxColumn
+            // 
+            this.minsDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.minsDataGridViewTextBoxColumn.DataPropertyName = "mins";
+            this.minsDataGridViewTextBoxColumn.HeaderText = "Minutes";
+            this.minsDataGridViewTextBoxColumn.MinimumWidth = 92;
+            this.minsDataGridViewTextBoxColumn.Name = "minsDataGridViewTextBoxColumn";
+            this.minsDataGridViewTextBoxColumn.ReadOnly = true;
+            this.minsDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.minsDataGridViewTextBoxColumn.Width = 92;
+            // 
+            // Delete
+            // 
+            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Delete.DataPropertyName = "Delete";
+            this.Delete.HeaderText = "Delete";
+            this.Delete.MinimumWidth = 92;
+            this.Delete.Name = "Delete";
+            this.Delete.ReadOnly = true;
+            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Delete.Text = "Delete";
+            this.Delete.UseColumnTextForButtonValue = true;
+            this.Delete.Width = 92;
+            // 
+            // createManualProgramUserControl
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.startProgramPanel);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "startProgramUserControl";
-            this.Size = new System.Drawing.Size(854, 640);
+            this.Name = "createManualProgramUserControl";
+            this.Size = new System.Drawing.Size(569, 416);
             this.startProgramPanel.ResumeLayout(false);
             this.startProgramPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
@@ -646,12 +635,12 @@ namespace ArduinoGui
         private System.Windows.Forms.TextBox pauseBottle;
         private System.Windows.Forms.ComboBox pauseMins;
         private System.Windows.Forms.BindingSource intervalDataBindingSource;
+        private System.Windows.Forms.ComboBox repeat;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn bottleDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn daysDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hoursDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn minsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
-        private System.Windows.Forms.ComboBox repeat;
-        private System.Windows.Forms.Label label1;
     }
 }
