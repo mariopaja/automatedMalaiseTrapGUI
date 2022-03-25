@@ -92,6 +92,8 @@ namespace ArduinoGui
                         {
                             try
                             {
+                                serialPort.PortName = comPort;
+                                serialPort.BaudRate = 9600;
                                 serialPort.Open();
                                 string sLine = "";
                                 sLine = sLine + "A" + startTimePicker.Value.ToString("HH:mm,dd/MM/yyyy") + ";" + "0";
@@ -111,6 +113,8 @@ namespace ArduinoGui
                         {
                             try
                             {
+                                serialPort.PortName = comPort;
+                                serialPort.BaudRate = 9600;
                                 serialPort.Open();
                                 string sLine = "";
                                 sLine = sLine + "A" + startTimePicker.Value.ToString("HH:mm,dd/MM/yyyy") + ";" + "1";

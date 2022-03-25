@@ -52,8 +52,12 @@ namespace ArduinoGui
                 {
                     string desc = item["Description"].ToString();
                     string deviceId = item["DeviceID"].ToString();
+                    string port=item["Caption"].ToString();
                     if (desc.Contains("Arduino"))
                     {
+                        //Console.WriteLine(port);
+                        Console.WriteLine(deviceId);
+                        //Console.WriteLine(desc);
                         return deviceId;
                     }
                 }

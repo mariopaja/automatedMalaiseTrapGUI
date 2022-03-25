@@ -48,9 +48,9 @@ namespace ArduinoGui
                 {
                     string desc = item["Description"].ToString();
                     string deviceId = item["DeviceID"].ToString();
-                    if (desc.Contains("Arduino"))
+                    if (desc.Contains("Arduino"))//Arduino
                     {
-                        DebugOut("Arduino details: " + desc + " on " + deviceId);
+                        DebugOut("STM details: " + desc + " on " + deviceId);
 
                         return deviceId;
                     }
@@ -81,6 +81,8 @@ namespace ArduinoGui
             {
                 try
                 {
+                    serialPort.PortName=comPort;
+                    serialPort.BaudRate = 9600;
                     serialPort.Open();
                     string sLine = "";
                     sLine = sLine + "R" + DateTime.Now.ToString("HH:mm:ss,dd/MM/yyyy") + ";";

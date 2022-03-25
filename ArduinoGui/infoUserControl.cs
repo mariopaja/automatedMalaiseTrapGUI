@@ -66,11 +66,13 @@ namespace ArduinoGui
         private void getInfoButton_Click(object sender, EventArgs e)
         {
 
-            
-                try
+            string comPort = DetectArduino();
+            try
                 {
-                    serialPort.Open();
-                    string sLine = "";
+                serialPort.PortName = comPort;
+                serialPort.BaudRate = 9600;
+                serialPort.Open();
+                string sLine = "";
                     sLine = sLine + "N;";
                     serialPort.Write("N");
                     IDtextbox.Text = serialPort.ReadLine();
